@@ -17,7 +17,7 @@ app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your-secret-key-chan
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=7)
 
 # Enable CORS
-CORS(app, origins=['http://localhost:*', 'http://127.0.0.1:*', 'https://*.github.io'])
+CORS(app, origins=['http://localhost:*', 'http://127.0.0.1:*', 'https://*.github.io', 'https://hammerdirt-analyst.github.io', 'file://*'], methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allow_headers=['Content-Type', 'Authorization'])
 
 # Initialize JWT
 jwt = JWTManager(app)
